@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Flow Done</string>
+    <string name="loginText">Type in your email</string>
+    <string name="enterPassword">password</string>
+    <string name="loginButton">Login</string>
+    <string name="signUp">sign up</string>
 </resources>
