@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "870756192834",
+    "firebase_url": "https://flowdone-f51ed.firebaseio.com",
+    "project_id": "flowdone-f51ed",
+    "storage_bucket": "flowdone-f51ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870756192834:android:b5ce79fe33ea7e3b",
+        "android_client_info": {
+          "package_name": "com.example.flowdone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870756192834-279rjd6eb101ui3lp57dcuvgdck5l19o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flowdone",
+            "certificate_hash": "05b9c2ad81b236d3866d184fc0da70e26a9f93d5"
+          }
+        },
+        {
+          "client_id": "870756192834-k271k4oqemomp74a95vvj2pqfbjmhbj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpJL3VTNZLR293RkYsMhuAJRTNMYjRO5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870756192834-k271k4oqemomp74a95vvj2pqfbjmhbj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
