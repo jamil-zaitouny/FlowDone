@@ -1,8 +1,10 @@
 package com.example.flowdone;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.internal.NavigationMenuItemView;
 import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
@@ -13,6 +15,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -20,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Toast;
 
 public class MainPageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -45,9 +49,12 @@ public class MainPageActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        //logout button
+        MenuItem mLogoutMenuItem = (MenuItem)findViewById(R.id.logoutButton);
     }
 
-    @Override
+        @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -73,6 +80,13 @@ public class MainPageActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }else if(id == R.id.logoutButton){
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
             return true;
         }
 
@@ -103,4 +117,5 @@ public class MainPageActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
