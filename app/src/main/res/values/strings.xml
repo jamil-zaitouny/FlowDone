@@ -19,4 +19,5 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="addSomething">You didn\'t add any cards yet! Press the button below to start your procrastination-free journey!</string>
 </resources>
