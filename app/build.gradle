@@ -23,8 +23,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //Added firebase dependencies for core functionality and authentication
     //used version 16.0.1 so that the app can run on minSdk 15
-    implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.google.firebase:firebase-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

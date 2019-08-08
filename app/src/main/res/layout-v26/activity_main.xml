@@ -16,13 +16,14 @@
             android:text="Sign In"
             android:textSize="30dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="20dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/emailText"
             android:hint="@string/loginText"
             android:layout_margin="15dp"
+
             />
         <EditText
             android:layout_width="match_parent"

@@ -3,7 +3,7 @@
     <string name="loginText">Type in your email</string>
     <string name="enterPassword">password</string>
     <string name="loginButton">Login</string>
-    <string name="signUp">sign up</string>
+    <string name="signUp"><u>If you haven\'t made an account yet click here to sign up</u></string>
     <string name="logout">Logout</string>
     <string name="title_activity_main_page">MainPageActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -20,4 +20,8 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="addSomething">You didn\'t add any cards yet! Press the button below to start your procrastination-free journey!</string>
+    <string name="newPassword">Type In Your New Password</string>
+    <string name="confirmPassword">Please Re-Enter Your Password</string>
+    <string name="alreadHaveAccount"><u>If you already have an account click here to login</u></string>
+    <string name="createAccount">Create Account</string>
 </resources>

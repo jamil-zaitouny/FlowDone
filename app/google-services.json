@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "870756192834-1nhf6cqdbm099mgrhqfpd1dsj252199q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flowdone",
+            "certificate_hash": "71a96fd7ac47f6ae38b87e5531ec5d02c390df8f"
+          }
+        },
+        {
           "client_id": "870756192834-279rjd6eb101ui3lp57dcuvgdck5l19o.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

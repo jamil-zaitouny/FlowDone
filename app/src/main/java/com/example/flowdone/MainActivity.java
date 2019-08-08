@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,10 +23,12 @@ import com.google.firebase.auth.EmailAuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.w3c.dom.Text;
+
 import java.security.AuthProvider;
 
 public class MainActivity extends AppCompatActivity {
-    private Button mSignUpButton;
+    private TextView mSignUpText;
     private Button mLoginButton;
     private EditText mEmail;
     private EditText mPassword;
@@ -40,22 +43,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseApp.initializeApp(this);
+        isLoggedIn();
+
         //initializes firebbase app
         mEmailAuth = FirebaseAuth.getInstance();
 
-
         //Connects variables to the activity
-        mSignUpButton = (Button)findViewById(R.id.signUp);
+        mSignUpText = (TextView)findViewById(R.id.signUp);
         mLoginButton = (Button)findViewById(R.id.loginButton);
         mEmail = (EditText) findViewById(R.id.emailText);
         mPassword = (EditText) findViewById(R.id.passwordText);
         progressDialog = new ProgressDialog(this);
 
         //Tells the user that sign up will be made available at a later date
-        mSignUpButton.setOnClickListener(new View.OnClickListener(){
+        mSignUpText.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Sign up will become available at a later date!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
             }
         });
 
@@ -99,9 +103,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    public void onStart(){
-//        super.onStart();
-//        FirebaseUser currentUser = mEmailAuth.getCurrentUser();
-//    }
+    public void isLoggedIn(){
+        super.onStart();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(currentUser != null){
+            startActivity(new Intent(getApplicationContext(), MainPageActivity.class));
+            finish();
+            return;
+        }
+    }
  }
 
