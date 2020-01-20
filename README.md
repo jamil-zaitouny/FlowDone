@@ -1,3 +1,3 @@
 # FlowDone
-Time to work this bad boy day and night!
-3days left!
+## About 
+FlowDone is an android app that allows users to film video logs of themselves whilst working on a project, In hopes of motivating themselves in the future and keeping track of their thoughts throughout the process of developing their project.
